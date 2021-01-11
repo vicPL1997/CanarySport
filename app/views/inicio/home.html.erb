@@ -1,2 +1,65 @@
-<h1>Inicio#home</h1>
-<p>Find me in app/views/inicio/home.html.erb</p>
+<%
+time = Time.now
+dia = time.strftime("%A")
+today = ""
+case dia
+when "Monday"
+    today = "Lunes"
+when "Tuesday"
+    today = "Martes"
+when "Wednesday"
+    today = "Miércoles"
+when "Thursday"
+    today = "Jueves"
+when "Friday"
+    today = "Viernes"
+when "Saturday"
+    today = "Sábado"
+when "Sunday"
+    today = "Domingo"
+end
+%>
+
+<div class="container-fluid text-center" >
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <img src="/images/logo.png" class="img-rounded img-responsive" alt="EdgeWaterSurfing logo">
+            <p class="time">Hoy es <%=today%>, <%=time.strftime("%k:%M %p") %></p>
+            <%if session[:usuario_id] != nil %>
+                <p class="side">Estás logeado como <%=rol%></p>     
+            <%end%>
+            <p><a href="/about">Sobre nosotros</a></p>
+            <p><a href="/terminos">Términos</a></p>
+            
+            
+        </div>
+        <div class="col-sm-10 text-left" style="text-align: justify; text-justify: inter-word;">
+            <div class="contenedor">
+                <img id="imagenIndex" src="/images/indice.jpeg" class="img-rounded img-responsive mx-auto d-block" alt="Indice oceano" style="padding-top: 3px;">
+                <div class="overlay">
+                    <div class="text">Playa de Maspalomas</div>
+                </div>
+            </div>
+            <h1>Bienvenido/a a CanarySport</h1>
+            <h2>¿vas a hacer deporte?</h2>
+            <p>En</p> 
+            <div class="contenedor">
+                <img id="imagenIndex" src="/images/surf1.png" class="img-rounded img-responsive" alt="Surf 1" style="padding-top: 3px;">
+                <div class="overlay">
+                    <div class="text">Biblioteca al aire libre</div>
+                </div>
+            </div>
+            <h2>¿Necesitas equipo?</h2>
+            <p></p>
+            <div class="contenedor">
+                <img id="imagenIndex" src="/images/olas.jpg" class="img-rounded img-responsive" alt="Surf 2" style="padding-top: 3px;">
+                <div class="overlay">
+                    <div class="text">Playa del inglés</div>
+                </div>
+            </div>
+            <h2>¡Contacta con nosotros!</h2>
+            <p>Contacta con nosotros si tienes alguna duda, sugerencia o queja.
+            Ve a <a href="/contacto">contacto</a></p>
+        </div>
+    </div>
+</div>
