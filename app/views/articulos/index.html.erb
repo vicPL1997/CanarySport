@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Articulos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th colspan="3">Imagen</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articulos.each do |articulo| %>
+      <tr>
+        <td><%= articulo.nombre %></td>
+        <td><%= articulo.precio %></td>
+        <td><%= articulo.descripcion %></td>
+        <td><% if articulo.image.attached? %>
+        <img src="<%= url_for(artuculo.image)  %>" class="img-rounded img-responsive" alt="Product view">
+      <% end %></td>
+        <td><%= link_to 'Show', articulo %></td>
+        <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
+        <td><%= link_to 'Destroy', articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Articulo', new_articulo_path %>
