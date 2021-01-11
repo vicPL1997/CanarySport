@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @ropa.nombre %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @ropa.precio %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @ropa.descripcion %>
+</p>
+
+<p>
+<% if @ropa.image.attached? %>
+<p>
+<strong>Image:</strong>
+<br>
+<%= image_tag @ropa.image %>
+</p>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_ropa_path(@ropa) %> |
+<%= link_to 'Back', ropas_path %>

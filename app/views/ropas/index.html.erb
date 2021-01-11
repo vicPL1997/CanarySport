@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ropas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Descripcion</th>
+      <th colspan="3">Imagen</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ropas.each do |ropa| %>
+      <tr>
+        <td><%= ropa.nombre %></td>
+        <td><%= ropa.precio %></td>
+        <td><%= ropa.descripcion %></td>
+        <td><% if ropa.image.attached? %>
+        <img src="<%= url_for(ropa.image)  %>" class="img-rounded img-responsive" alt="Product view">
+      <% end %></td>
+        <td><%= link_to 'Show', ropa %></td>
+        <td><%= link_to 'Edit', edit_ropa_path(ropa) %></td>
+        <td><%= link_to 'Destroy', ropa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ropa', new_ropa_path %>
