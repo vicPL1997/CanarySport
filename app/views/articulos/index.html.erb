@@ -19,7 +19,7 @@
         <td><%= articulo.precio %></td>
         <td><%= articulo.descripcion %></td>
         <td><% if articulo.image.attached? %>
-        <img src="<%= url_for(artuculo.image)  %>" class="img-rounded img-responsive" alt="Product view">
+        <img src="<%= url_for(articulo.image)  %>" class="img-rounded img-responsive" alt="Product view">
       <% end %></td>
         <td><%= link_to 'Show', articulo %></td>
         <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>

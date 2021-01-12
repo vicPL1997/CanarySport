@@ -1,0 +1,2 @@
+module TiendaArticuloHelper
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1>Tienda</h1>
+  <p> Bienvenidos a nuestra tienda, a continuación tendrán un listado de todos los productos que ofrecemos, tendrán la posibilidad de ver el producto o de comprarlo </h1>
+
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Imagen</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% @articulos.each do |articulo| %>
+      <tr>
+        <td><%= articulo.nombre %></td>
+        <td><%= articulo.descripcion %></td>
+        <td><%= image_tag(articulo.image) if articulo.image.attached? %></td>
+        <td><button type="button" class="btn btn-success"><%= link_to 'show', articulo%>ver</button></td>
+        <td><button type="button" class="btn btn-success">Comprar</button></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div> 
