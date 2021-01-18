@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  get 'contacto/index'
   get 'panel_administracion/index'
   resources :articulos
   resources :ropas
   resources :tienda_ropa
   resources :tienda_articulo
   resources :panel_administracion
+  resources :contacto
   get 'inicio/home'
   root :to => "inicio#home"
 

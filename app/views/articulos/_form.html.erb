@@ -1,3 +1,5 @@
+<div class="container">
+
 <%= form_with(model: articulo) do |form| %>
   <% if articulo.errors.any? %>
     <div id="error_explanation">
@@ -34,3 +36,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+

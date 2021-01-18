@@ -21,7 +21,7 @@
         <td><%= articulo.precio %> €</td>
         <td><%= articulo.descripcion %></td>
         <td><%= image_tag(articulo.image) if articulo.image.attached? %></td>
-        <td><button type="button" class="btn btn-success"><%= link_to 'show', articulo%>ver</button></td>
+        <td><button type="button" class="btn btn-success"><%= link_to 'ver', articulo%></button></td>
         <td><button type="button" class="btn btn-success">Comprar</button></td>
 
       </tr>

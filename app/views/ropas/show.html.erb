@@ -1,3 +1,5 @@
+
+<div class="container-fluid text-center">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +9,7 @@
 
 <p>
   <strong>Precio:</strong>
-  <%= @ropa.precio %>
+  <%= @ropa.precio%> €
 </p>
 
 <p>
@@ -18,12 +20,13 @@
 <p>
 <% if @ropa.image.attached? %>
 <p>
-<strong>Image:</strong>
+<strong>Imagen:</strong>
 <br>
 <%= image_tag @ropa.image %>
 </p>
 <% end %>
 </p>
+<br>
+<a class="enlaceboton" href="/tienda_ropa">Volver</a>
 
-<%= link_to 'Edit', edit_ropa_path(@ropa) %> |
-<%= link_to 'Back', ropas_path %>
+</div>

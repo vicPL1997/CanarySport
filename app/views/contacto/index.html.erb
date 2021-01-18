@@ -1,0 +1,34 @@
+<div class="container">
+<h1>Ventana de Contacto</h1><br>
+<p>Si tiene alguna duda o quiere solicitar información sobre algún producto o las actividades que ofertamos rellene este formulario para ponerse en contacto con nosotros</p><br>
+<%= form_for :post do |f| %>
+    <p>
+      <%= f.label :Nombre %>
+      <%= f.text_field :Nombre%><br>
+    </p>
+  
+    <p>
+      <%= f.label :Apellidos %>
+      <%= f.text_field  :Apellidos%><br>
+    </p>
+  
+    <p>
+      <%= f.label :Telefono %>
+      <%= f.text_field  :Telefono%><br>
+    </p>
+    <p>
+      <%= f.label :Direccion %>
+      <%= f.text_field  :Direccion%><br>
+    </p>
+    <p>
+      <%= f.label :Motivo  %><br>
+      <%= f.text_area  :Motivo%><br><br>
+    </p>
+    
+    
+            
+    <button type="button" class="btn btn-success"><a href="/">Enviar</a></button>
+    <button type="button" class="btn btn-danger"><a href="/">Volver atrás</a></button>
+  <% end %>
+  </div>
+
