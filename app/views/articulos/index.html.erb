@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articulos</h1>
+<h1>Nuestro Material</h1>
 
-<table>
-  <thead>
+<table class="table table-striped table-hover">
+  <thead class="thead-dark">
     <tr>
       <th>Nombre</th>
       <th>Precio</th>
       <th>Descripcion</th>
-      <th colspan="3">Imagen</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
     </tr>
   </thead>
 
@@ -21,14 +22,15 @@
         <td><% if articulo.image.attached? %>
         <img src="<%= url_for(articulo.image)  %>" class="img-rounded img-responsive" alt="Product view">
       <% end %></td>
-        <td><%= link_to 'Show', articulo %></td>
-        <td><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
-        <td><%= link_to 'Destroy', articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="enlaceboton"><%= link_to 'Show', articulo %></td>
+        <td class="enlaceboton"><%= link_to 'Edit', edit_articulo_path(articulo) %></td>
+        <td class="enlaceboton"><%= link_to 'Destroy', articulo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<a class="enlaceboton" href="/articulos/new" role="button">Crear artículo</a>
+<a class="enlaceboton" href="/panel_administracion" role="button">Página principal</a>
 
-<%= link_to 'New Articulo', new_articulo_path %>

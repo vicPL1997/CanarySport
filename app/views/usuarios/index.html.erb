@@ -8,10 +8,8 @@
       <tr>
         <th>Nombre</th>
         <th>Apellidos</th>
-        <th>Categoría</th>
         <th>Rol</th>
         <th>Datos</th>
-        <th>Imagen</th>
         <th>Email</th>
         <th colspan="3"></th>
       </tr>
@@ -22,10 +20,8 @@
         <tr>
           <td><%= usuario.nombre %></td>
           <td><%= usuario.apellidos %></td>
-          <td><%= usuario.categoria %></td>
           <td><%= usuario.rol %></td>
           <td><%= usuario.datos %></td>
-          <td><%= image_tag(usuario.image) if usuario.image.attached? %></td>
           <td><%= usuario.email %></td>
           <td><%= link_to 'Ver', usuario %></td>
           <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
@@ -37,7 +33,7 @@
 
   <br>
 
-  <a class="btn btn-primary" href="/usuarios/new" role="button">Nuevo usuario</a>
-  <a class="btn btn-success" href="/" role="button">Página principal</a>
+  <a class="enlaceboton" href="/usuarios/new" role="button">Nuevo usuario</a>
+  <a class="enlaceboton" href="/panel_administracion" role="button">Página principal</a>
 </div>
 

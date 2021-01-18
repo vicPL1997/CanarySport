@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'panel_administracion/index'
   resources :articulos
   resources :ropas
   resources :tienda_ropa
   resources :tienda_articulo
+  resources :panel_administracion
   get 'inicio/home'
   root :to => "inicio#home"
 
