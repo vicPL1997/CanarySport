@@ -11,6 +11,7 @@
   </head>
 
   <body>
+  <%= rol = session[:usuario_rol].to_s.downcase %>
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -26,13 +27,9 @@
         <% if session[:usuario_id] != nil %>
           <% if rol == "admin" %>
             <li class="noactive dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:white">Gestionar
-              <span class="caret"></span></a>
-              <ul class="dropdown-menu">
+              <a href="/tienda_ropa" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color:white">Gestionar
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="/usuarios">Gestionar usuarios</a></li>
-                <li><a href="/clases">Gestionar clases</a></li>
-                <li><a href="/productos">Gestionar productos</a></li>
-                <li><a href="/tutoriales">Gestionar tutoriales</a></li>
               </ul>
             </li>
           <% end %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid text-center">
+<p>
+  <strong>Nombre:</strong>
+  <%= @usuario.nombre %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @usuario.apellidos %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @usuario.categoria %>
+</p>
+
+<p>
+  <strong>Rol:</strong>
+  <%= @usuario.rol %>
+</p>
+
+<p>
+<% if @usuario.image.attached? %>
+<p>
+<strong>Image:</strong>
+<br>
+<%= image_tag @usuario.image %>
+</p>
+<% end %>
+</p>
+
+<p>
+  <strong>Datos:</strong>
+  <%= @usuario.datos %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>
+</div>

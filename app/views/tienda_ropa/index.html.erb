@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-  <h1>Tienda</h1>
-  <p> Bienvenidos a nuestra tienda, a continuación tendrán un listado de todos los productos que ofrecemos, tendrán la posibilidad de ver el producto o de comprarlo </h1>
+  <h1>Tienda de ropa</h1>
+  <p> Bienvenidos a nuestra tienda de ropa, a continuación tendrán un listado de todos los productos que ofrecemos, tendrán la posibilidad de ver el producto o de comprarlo </h1>
 
  <table class="table">
     <thead>
       <tr>
         <th>Nombre</th>
+        <th>Precio</th>
         <th>Descripcion</th>
         <th>Imagen</th>
         <th colspan="3"></th>
@@ -17,6 +18,7 @@
     <% @ropas.each do |ropa| %>
       <tr>
         <td><%= ropa.nombre %></td>
+        <td><%= ropa.precio %></td>
         <td><%= ropa.descripcion %></td>
         <td><%= image_tag(ropa.image) if ropa.image.attached? %></td>
         <td><button type="button" class="btn btn-success"><%= link_to 'show', ropa%>ver</button></td>
