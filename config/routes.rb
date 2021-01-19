@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sobre_nosotros/index'
   get 'contacto/index'
   get 'panel_administracion/index'
   resources :articulos
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   resources :tienda_articulo
   resources :panel_administracion
   resources :contacto
+  resources :sobre_nosotros
   get 'inicio/home'
   root :to => "inicio#home"
 

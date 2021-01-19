@@ -22,10 +22,15 @@
         <td><%= ropa.descripcion %></td>
         <td><%= image_tag(ropa.image) if ropa.image.attached? %></td>
         <td><button type="button" class="btn btn-success"><%= link_to 'Ver', ropa%></button></td>
-        <td><button type="button" class="btn btn-success">Comprar</button></td>
+        <td><button type="button" class="btn btn-success" onclick="pulsar()"><a href="/">Comprar</a></button></td>
 
       </tr>
     <% end %>
   </tbody>
 </table>
 </div> 
+<script>
+function pulsar() {
+alert("¿Esta seguro que desea comprar este producto?");
+}
+</script>
